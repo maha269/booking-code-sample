@@ -1,0 +1,41 @@
+extend index
+
+block pageindex 
+ section.map-back
+   div.container
+    h1.title Edit Profile
+  
+
+ <!-- End Section panner Top -->
+ section.profile
+  div.container
+   //-  div.alert.alert-success #[i(class="fa fa-check")] Data changed successfully
+
+   div.row
+    div.col-sm-3.item
+     div.inner
+      h2.title navigation 
+      nav.profile-link
+       a(href="edit-profile.html" class="active") Edit profile
+       a(href="my-wishlist.html") Wishlist
+       a(href="#")   log out
+    div.col-sm-9.item 
+     div.inner
+      div.head-title.create.p-0
+       h3.title  Edit profile
+       p.text Create your own account
+      form(action="#" method="")
+        div.row
+          div(class="col-sm-6 inpudata")
+           input(type="text" name="" class="form-control" placeholder="First Name")
+          div(class="col-sm-6 inpudata")
+           input(type="text" name="" class="form-control" placeholder="Last Name")
+          div(class="col-sm-6 inpudata")
+           input(type="password" name="" class="form-control" placeholder="Password")
+          div(class="col-sm-6 inpudata")
+           input(type="password" name="" class="form-control" placeholder="Repeat Password")
+          div(class="col-sm-12 inpudata")
+           input(type="text" name="" class="form-control" placeholder="Address")
+          div(class="col-sm-12 inpudata")
+           button(class="bottom" type="submit") Save now
+ 

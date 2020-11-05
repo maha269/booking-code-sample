@@ -1,0 +1,82 @@
+extend index
+
+block pageindex 
+ section.step-sign
+  div.container
+   form(id="contact" action="#")
+    div    
+     h3 #[i(class="fas fa-check")]  1 |  first step
+     section
+      div.row
+       div.col-sm-3.item-stab
+        div.inner.active
+         img(src='images/profile-4.jpg' alt="" title="")
+         h4.title California
+         p.text California
+
+       div.col-sm-3.item-stab
+        div.inner
+         img(src='images/profile-4.jpg' alt="" title="")
+         h4.title California
+         p.text California
+       
+       div.col-sm-3.item-stab
+        div.inner
+         img(src='images/profile-4.jpg' alt="" title="")
+         h4.title California
+         p.text California
+       
+       div.col-sm-3.item-stab
+        div.inner
+         img(src='images/profile-4.jpg' alt="" title="")
+         h4.title California
+         p.text California
+     //- section 1
+    
+    
+     h3 #[i(class="fas fa-check")]  2 |  first step
+     section
+      div.row
+       div.col-sm-3.item-tab
+        div.imgcent
+         img(src='images/profile-4.jpg'  class="img_prev" alt="" title="")
+         label(class="file-bro") Upload Photo
+          input(type="file"   onchange="readURL(this);" style="display: none;")
+       div.col-sm-9.itemform
+        div.row
+         div.col-sm-6.fild
+          input(type="text" class="form-control" placeholder="Enter your First name" name="FirstName"  autocomplete="off" autofocus required )
+          label.floating-label First Name
+         div.col-sm-6.fild
+          input(type="email" class="form-control" placeholder="Enter your Email" name="Email"  autocomplete="off" autofocus required )
+          label.floating-label Email
+         div.col-sm-6.fild
+          input(type="text" class="form-control" placeholder="Enter your address" name="address"  autocomplete="off" autofocus required )
+          label.floating-label address
+         div.col-sm-6.fild
+          input(type="text" class="form-control" placeholder="Enter your Last name" name="LasttName" autocomplete="off" autofocus required)
+          label.floating-label Last Name
+         div.col-sm-12.fild
+           i(class="fas fa-chevron-down iconsel")
+           select(class="form-control required" name="Country" autocomplete="off" autofocus required)
+            option 
+            option Greece
+            option Greece
+            option Greece
+           label.floating-label Country of origin       
+         div.col-sm-12.fild
+          input(type="text" class="form-control mobile-number" placeholder="Phone number (optional)" name="Phonenumber"  autocomplete="off" autofocus required )
+   
+      
+     //- section 2
+    
+     h3 #[i(class="fas fa-check")]  3 | third step
+     section 333
+     //- section 3
+     
+     h3 #[i(class="fas fa-check")]  4 | fourth step
+     section 444
+     //- section 4 
+
+ script(src="js/staps.js")
+  

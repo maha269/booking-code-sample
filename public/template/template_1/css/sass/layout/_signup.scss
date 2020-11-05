@@ -1,0 +1,146 @@
+.registr,
+.login,
+.forget {
+    @include section;
+    @media (max-width: 667px) {
+        padding: $maxmargin*2 $zero;
+    }
+    .signupfilde {
+        @include style-inner;
+        display: $block;
+        margin: $zero $auto;
+        width: 492px;
+        padding: 32px;
+        @media (max-width: 667px) {
+            width: $fullwidth;
+            padding: $minmargin+1px;
+        }
+        .title {
+            @include title;
+            font-size: 30px;
+        }
+        p {
+            line-height: 15px;
+            margin-top: 16px;
+        }
+        .icons-social {
+            margin-top: $minmargin+1px;
+            li {
+                display: flex;
+                a {
+                    width: $fullwidth;
+                    height: 40px;
+                    @include border-radius(60px);
+                    color: $white;
+                    font-size: 12px;
+                    line-height: 15px;
+                    @include flex;
+                    i {
+                        margin-right: 4px;
+                    }
+                    &.icon-facebook {
+                        background: #3b5998;
+                    }
+                    &.icon-twitter {
+                        background: #00acee;
+                    }
+                    &.icon-gplus {
+                        background: #dd4b39;
+                    }
+                }
+            }
+        }
+        .inpusrach {
+            margin-top: $minmargin+1px;
+            @media (max-width: 767px) {
+                flex: $fullwidth;
+                max-width: $fullwidth;
+            }
+            label {
+                color: $blak;
+                font-size: 12px;
+                line-height: 15px;
+            }
+            .form-control {
+                @include input;
+            }
+            &.type-it {
+                margin-top: 24px;
+                label {
+                    margin: $zero;
+                    font-size: 14px !important;
+                }
+                .che-box {
+                    @include check-box;
+                }
+            }
+            .col-label {
+                @include check-box;
+                margin-top: $minmargin+1px;
+                .label-text {
+                    color: $blak !important;
+                    font-size: 14px;
+                }
+                input[type="checkbox"]+.label-text:before {
+                    top: -2px;
+                }
+            }
+        }
+        .forgetlink {
+            display: $block;
+            text-align: $right;
+            line-height: 17px;
+            &:hover {
+                text-decoration: underline;
+                color: $blue;
+            }
+        }
+        .textsign {
+            margin-top: $maxmargin+2px;
+            line-height: 17px;
+            color: $blak;
+            @media (max-width: 667px) {
+                margin-top: $minmargin+1px;
+            }
+            a {
+                color: $blue;
+                text-decoration: underline;
+                line-height: 17px;
+                &:hover {
+                    text-decoration: $none;
+                }
+            }
+        }
+        .chicksign {
+            display: flex;
+            justify-content: space-between;
+            margin-top: $maxmargin;
+            @media (max-width: 991px) {
+                margin-top: $minmargin;
+            }
+            .che-box {
+                @include check-box;
+                margin: $zero;
+                .label-text {
+                    a {
+                        color: $blue;
+                        text-decoration: underline;
+                        &:hover {
+                            text-decoration: $none;
+                        }
+                    }
+                }
+                input[type="checkbox"]+.label-text:before {
+                    font-size: 17px;
+                }
+            }
+        }
+        .bottom {
+            @include bottom;
+            width: $fullwidth;
+            padding: 12px 24px;
+        }
+    }
+}
+
+//  End signup & login & forget

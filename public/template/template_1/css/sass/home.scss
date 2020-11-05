@@ -1,0 +1,129 @@
+@import 'helpers/mixins';
+@import 'helpers/variables';
+@import 'layout/header';
+@import 'layout/slider';
+@import 'layout/brands';
+@import 'layout/error404';
+@import 'layout/contactus';
+@import 'layout/aboutus';
+@import 'layout/news';
+@import 'layout/signup';
+@import 'layout/steps';
+@import 'layout/profile';
+@import 'layout/footer';
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+hr,
+strong,
+b,
+input,
+select,
+textarea,
+.highcharts-title,
+.highcharts-axis-labels,
+.highcharts-yaxis-title {
+    @include reset;
+}
+
+ ::-webkit-scrollbar {
+    width: 5px;
+    height: 1rem;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: $white;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background-color: $green;
+    cursor: pointer;
+}
+
+
+/* Handle on hover */
+
+// html {
+//     scrollbar-width: thin;
+//     scroll-behavior: smooth;
+// }
+body {
+    direction: $direction;
+    text-align: $left;
+    background: $white;
+    position: relative;
+    &.active {
+        overflow: hidden;
+    }
+}
+
+.container {
+    clear: both;
+    @include position(relative);
+}
+
+.alert {
+    margin: $zero;
+    margin-top: $minmargin;
+    @include border-radius(60px);
+}
+
+.map-back {
+    @include map-back;
+}
+
+.maplink {
+    @include maplink-in;
+}
+
+.pagination {
+    margin-top: $maxmargin;
+    justify-content: $senter;
+    li {
+        display: $inline;
+        margin: $zero 3px;
+        a,
+        span {
+            display: $block;
+            padding-top: 10px;
+            text-align: $senter;
+            color: $blak;
+            @include border-radius(4px !important);
+            width: 40px;
+            height: 40px;
+            display: $block;
+            border: $zero;
+            background: $white;
+            box-shadow: 0px 10px 25px -15px #0f0f0f;
+            font-size: 16px;
+            @include transition(all 0.5s ease-in-out 0s);
+        }
+    }
+    .page-link.active,
+    .page-link:hover {
+        background: $blue !important;
+        color: $white !important;
+    }
+}
+
+.a2a_kit.a2a_kit_size_32.a2a_default_style {
+    margin-top: $maxmargin;
+}
+
+///* End Pagination

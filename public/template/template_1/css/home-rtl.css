@@ -1,0 +1,610 @@
+.header {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  background: #fff;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+  -webkit-box-shadow: 0px 4px 10px rgba(40, 54, 69, 0.18);
+  -moz-box-shadow: 0px 4px 10px rgba(40, 54, 69, 0.18);
+  -o-box-shadow: 0px 4px 10px rgba(40, 54, 69, 0.18);
+  -ms-box-shadow: 0px 4px 10px rgba(40, 54, 69, 0.18);
+  box-shadow: 0px 4px 10px rgba(40, 54, 69, 0.18); }
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .header.sticky {
+    position: fixed;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s; }
+    .header.sticky .minheeader {
+      margin-top: -40px;
+      -moz-transition: all 0.5s ease-in-out 0s;
+      -o-transition: all 0.5s ease-in-out 0s;
+      -webkit-transition: all 0.5s ease-in-out 0s;
+      transition: all 0.5s ease-in-out 0s; }
+  .header .minheeader {
+    width: 100%;
+    padding: 4px 0px;
+    position: relative;
+    border-bottom: 1px solid rgba(40, 54, 69, 0.15); }
+    .header .minheeader .linkstop {
+      display: flex;
+      align-items: center; }
+      .header .minheeader .linkstop a {
+        text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.19);
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s;
+        margin-right: 15px; }
+        @media (max-width: 767px) {
+          .header .minheeader .linkstop a {
+            margin-right: 10px;
+            font-size: 13px; } }
+        .header .minheeader .linkstop a i {
+          font-size: 16px;
+          color: #BE0000;
+          text-shadow: none; }
+          @media (max-width: 767px) {
+            .header .minheeader .linkstop a i {
+              font-size: 12px; } }
+        .header .minheeader .linkstop a.register {
+          font-weight: 600;
+          text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.19);
+          padding: 0px 8px;
+          margin: 0px;
+          -webkit-border-radius: 6px;
+          border-radius: 6px;
+          background-clip: padding-box;
+          border: 1px solid rgba(0, 0, 0, 0.41); }
+          .header .minheeader .linkstop a.register:hover {
+            background: #ededed; }
+    .header .minheeader .dropdown .dropdown-toggle {
+      -moz-transition: all 0.5s ease-in-out 0s;
+      -o-transition: all 0.5s ease-in-out 0s;
+      -webkit-transition: all 0.5s ease-in-out 0s;
+      transition: all 0.5s ease-in-out 0s;
+      font-size: 13px;
+      margin: 0px;
+      text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.19); }
+      .header .minheeader .dropdown .dropdown-toggle span {
+        width: 78px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
+        height: 12px;
+        line-height: 12px; }
+        @media (max-width: 550px) {
+          .header .minheeader .dropdown .dropdown-toggle span {
+            width: 60px; } }
+      .header .minheeader .dropdown .dropdown-toggle i {
+        font-size: 10px;
+        color: #141923;
+        text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.19); }
+      .header .minheeader .dropdown .dropdown-toggle:after {
+        display: none; }
+    .header .minheeader .dropdown .dropdown-menu.show {
+      margin-top: 12px;
+      right: 0px !important;
+      left: auto !important;
+      padding: 0px;
+      transform: none !important;
+      top: 33px !important;
+      border: 1px solid #ededed;
+      z-index: 2; }
+      .header .minheeader .dropdown .dropdown-menu.show .dropdown-item {
+        padding: 5px 20px;
+        border-bottom: 1px solid #ededed;
+        font-size: 13px;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s;
+        background: none !important; }
+        .header .minheeader .dropdown .dropdown-menu.show .dropdown-item:last-child {
+          border: 0px; }
+        .header .minheeader .dropdown .dropdown-menu.show .dropdown-item.active, .header .minheeader .dropdown .dropdown-menu.show .dropdown-item:active, .header .minheeader .dropdown .dropdown-menu.show .dropdown-item:hover {
+          color: #04aced; }
+      .header .minheeader .dropdown .dropdown-menu.show:before {
+        content: "";
+        position: absolute;
+        top: -13px;
+        right: 6px;
+        width: 0px;
+        height: 0px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 12px solid #ededed; }
+      .header .minheeader .dropdown .dropdown-menu.show:after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        right: 6px;
+        width: 0px;
+        height: 0px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 10px solid #fff; }
+    .header .minheeader .dropdown.language a {
+      height: auto;
+      border-right: 0px;
+      padding: 7px 10px !important;
+      margin: 0px; }
+      .header .minheeader .dropdown.language a i {
+        font-size: 12px; }
+      .header .minheeader .dropdown.language a img {
+        width: 16px;
+        height: 11px;
+        margin-right: 5px; }
+    .header .minheeader .dropdown.language .dropdown-toggle {
+      padding: 0px;
+      margin: 0px;
+      border: 0px;
+      line-height: 8px;
+      cursor: pointer; }
+    .header .minheeader .dropdown.language .dropdown-menu.show {
+      left: 0 !important;
+      right: auto !important; }
+      .header .minheeader .dropdown.language .dropdown-menu.show:before {
+        position: absolute;
+        top: -13px !important;
+        left: 15px !important; }
+      .header .minheeader .dropdown.language .dropdown-menu.show:after {
+        position: absolute;
+        top: -10px !important;
+        left: 14.1px !important; }
+  .header .content {
+    height: 90px; }
+    @media (max-width: 991px) {
+      .header .content {
+        height: 70px; } }
+  .header .logo img {
+    width: 200px;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s; }
+    @media (max-width: 991px) {
+      .header .logo img {
+        width: 150px; } }
+  .header #cssmenu {
+    position: relative;
+    z-index: 10;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s; }
+    .header #cssmenu #menu-button {
+      display: none; }
+    .header #cssmenu ul {
+      display: inline-flex; }
+      .header #cssmenu ul li {
+        position: relative;
+        margin-left: 30px; }
+        @media (max-width: 1199px) {
+          .header #cssmenu ul li {
+            margin-left: 15px; } }
+        .header #cssmenu ul li:hover > ul {
+          left: auto;
+          z-index: 150; }
+        .header #cssmenu ul li a {
+          display: block;
+          position: relative;
+          text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.19);
+          -moz-transition: all 0.5s ease-in-out 0s;
+          -o-transition: all 0.5s ease-in-out 0s;
+          -webkit-transition: all 0.5s ease-in-out 0s;
+          transition: all 0.5s ease-in-out 0s;
+          outline: none; }
+          .header #cssmenu ul li a:hover, .header #cssmenu ul li a.active {
+            color: #04aced; }
+        .header #cssmenu ul li:hover a {
+          color: #04aced; }
+      .header #cssmenu ul ul {
+        position: absolute;
+        top: 100%;
+        left: -9999px;
+        padding-top: 35px; }
+        @media (max-width: 991px) {
+          .header #cssmenu ul ul {
+            padding-top: 0px; } }
+        .header #cssmenu ul ul li {
+          margin: 0px !important;
+          -moz-transition: background-color 1s 0.1s, color 2s;
+          -o-transition: background-color 1s 0.1s, color 2s;
+          -webkit-transition: background-color 1s 0.1s, color 2s;
+          transition: background-color 1s 0.1s, color 2s;
+          background: #99998f;
+          padding: 0px 15px; }
+          .header #cssmenu ul ul li.has-sub > a:after {
+            content: '';
+            position: absolute;
+            top: 16px;
+            right: 11px;
+            bottom: auto;
+            left: auto;
+            width: 8px;
+            height: 2px;
+            display: block;
+            background: #fff; }
+          .header #cssmenu ul ul li.has-sub > a:before {
+            content: '';
+            position: absolute;
+            top: 13px;
+            right: 14px;
+            bottom: auto;
+            left: auto;
+            display: block;
+            width: 2px;
+            height: 8px; }
+          .header #cssmenu ul ul li.has-sub:hover > a:before {
+            top: 17px;
+            height: 0px; }
+          .header #cssmenu ul ul li a {
+            padding: 7px 0px 7px 15px !important;
+            min-width: 180px !important;
+            height: auto !important;
+            color: #ededed !important;
+            border-bottom: 1px solid #2b2b2b;
+            text-transform: capitalize; }
+            .header #cssmenu ul ul li a:hover {
+              color: #1d1c1b !important; }
+            .header #cssmenu ul ul li a:before {
+              position: absolute;
+              top: 6px;
+              left: 0;
+              content: "-";
+              display: inline-block;
+              color: #fff; }
+          .header #cssmenu ul ul li ul {
+            margin-left: 100%;
+            top: 0px !important;
+            z-index: 170; }
+            .header #cssmenu ul ul li ul:after {
+              display: none; }
+          .header #cssmenu ul ul li:last-child a {
+            border: 0px;
+            padding-bottom: 0px; }
+  @media (max-width: 991px) {
+    .header .bot {
+      display: none; } }
+  .header .bot .bottom {
+    display: inline-block;
+    position: relative;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    overflow: hidden;
+    color: #fff;
+    outline: none;
+    outline-style: none;
+    border: 0px;
+    background: #04aced;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-clip: padding-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.15);
+    box-shadow: 0px 10px 25px -15px #0f0f0f; }
+    .header .bot .bottom:hover {
+      transform: translateY(-5px);
+      color: #141923; }
+    .header .bot .bottom:last-child {
+      background: #9ad545;
+      margin-left: 15px; }
+
+.rspon {
+  display: none; }
+  @media (max-width: 991px) {
+    .rspon {
+      display: block;
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      margin: 30px 0px; } }
+  .rspon .bottom {
+    display: inline-block;
+    position: relative;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    overflow: hidden;
+    color: #fff;
+    outline: none;
+    outline-style: none;
+    border: 0px;
+    background: #04aced;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-clip: padding-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.15);
+    box-shadow: 0px 10px 25px -15px #0f0f0f; }
+    .rspon .bottom:hover {
+      transform: translateY(-5px);
+      color: #141923; }
+    .rspon .bottom:last-child {
+      background: #9ad545;
+      margin-left: 15px; }
+
+@media (max-width: 991px) {
+  .header #cssmenu {
+    position: absolute;
+    right: 15px;
+    width: 200px;
+    z-index: 100; }
+    .header #cssmenu #menu-button {
+      display: block; }
+    .header #cssmenu ul {
+      position: absolute;
+      top: 46px;
+      width: 100%;
+      display: none;
+      background: #000;
+      z-index: 120; }
+      .header #cssmenu ul li {
+        width: 100%;
+        margin: 0px !important;
+        position: relative; }
+        .header #cssmenu ul li a {
+          width: 100%;
+          padding: 10px 15px;
+          height: auto;
+          margin: 0px;
+          color: #fff;
+          border-bottom: 1px solid #2d2c2c; }
+    .header #cssmenu #menu-button {
+      display: block !important;
+      cursor: pointer;
+      height: 20px;
+      width: 20px; }
+      .header #cssmenu #menu-button:after {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        display: block;
+        height: 8px;
+        width: 20px;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        content: '';
+        -moz-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s; }
+      .header #cssmenu #menu-button:before {
+        position: absolute;
+        top: 4px;
+        right: 0px;
+        display: block;
+        height: 2px;
+        width: 20px;
+        background: #000;
+        content: '';
+        -moz-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s; }
+      .header #cssmenu #menu-button.menu-opened:after {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background: #BE0000;
+        top: 11px;
+        border: 0px;
+        height: 2px;
+        width: 20px;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s; }
+      .header #cssmenu #menu-button.menu-opened:before {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        background: #BE0000;
+        top: 11px;
+        width: 20px;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s; }
+    .header #cssmenu .submenu-button {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      display: block;
+      border-left: 1px solid rgba(120, 120, 120, 0.2);
+      height: 48px;
+      width: 48px;
+      cursor: pointer;
+      z-index: 10; }
+      .header #cssmenu .submenu-button.submenu-button.submenu-opened {
+        background: #BE0000; }
+  .header #cssmenu ul ul li a {
+    min-width: 100%; }
+  .header #cssmenu ul ul ul li a {
+    padding-left: 35px; }
+  .header #cssmenu ul ul li a {
+    min-width: 100% !important;
+    color: #fff;
+    background: none; }
+  .header #cssmenu ul ul li:hover > a,
+  .header #cssmenu ul ul li.active > a {
+    color: #fff; }
+  .header #cssmenu ul ul,
+  .header #cssmenu ul ul ul,
+  .header #cssmenu.align-right ul ul {
+    position: relative !important;
+    left: 0px;
+    width: 100%;
+    top: 0px !important;
+    padding: 0px !important;
+    box-shadow: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-clip: padding-box; }
+  .header #cssmenu > ul > li.has-sub > a:after,
+  .header #cssmenu > ul > li.has-sub > a:before,
+  .header #cssmenu ul ul > li.has-sub > a:after,
+  .header #cssmenu ul ul > li.has-sub > a:before {
+    display: none; }
+  .header #cssmenu ul ul .submenu-button {
+    height: 34px;
+    width: 34px; }
+  .header #cssmenu .submenu-button:after {
+    position: absolute;
+    top: 23px;
+    right: 21px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #fff;
+    content: ''; }
+  .header #cssmenu ul ul .submenu-button:after {
+    top: 15px;
+    right: 13px; }
+  .header #cssmenu .submenu-button.submenu-opened:after {
+    background: #fff; }
+  .header #cssmenu .submenu-button:before {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #fff;
+    content: ''; }
+  .header #cssmenu ul ul .submenu-button:before {
+    top: 12px;
+    right: 16px; }
+  .header #cssmenu .submenu-button.submenu-opened:before {
+    display: none; } }
+.slider {
+  width: 100%;
+  padding: 45px 0px;
+  position: relative;
+  background: #fff; }
+  @media (max-width: 991px) {
+    .slider {
+      padding: 30px 0px; } }
+  .slider .item {
+    display: flex;
+    align-items: center; }
+    @media (max-width: 991px) {
+      .slider .item {
+        max-width: 100%;
+        flex: 100%; } }
+    .slider .item:first-child {
+      order: 1; }
+      @media (max-width: 991px) {
+        .slider .item:first-child {
+          order: 2;
+          margin-top: 30px; } }
+    .slider .item:last-child {
+      order: 2; }
+      @media (max-width: 991px) {
+        .slider .item:last-child {
+          order: 1; } }
+    .slider .item .content {
+      width: 100%; }
+      @media (max-width: 991px) {
+        .slider .item .content {
+          text-align: center; } }
+      .slider .item .content .title {
+        font-size: 36px;
+        width: 100%;
+        font-weight: bold;
+        text-shadow: 1px 1px 3px rgba(20, 25, 35, 0.3);
+        position: relative; }
+        @media (max-width: 991px) {
+          .slider .item .content .title {
+            font-size: 24px; } }
+      .slider .item .content .text {
+        font-size: 16px;
+        margin-top: 15px; }
+      .slider .item .content .bot {
+        margin-top: 88px; }
+        .slider .item .content .bot .bottom {
+          display: inline-block;
+          position: relative;
+          padding: 6px 16px;
+          font-size: 13px;
+          font-weight: 600;
+          overflow: hidden;
+          color: #fff;
+          outline: none;
+          outline-style: none;
+          border: 0px;
+          background: #04aced;
+          text-align: center;
+          text-transform: uppercase;
+          -webkit-border-radius: 4px;
+          border-radius: 4px;
+          background-clip: padding-box;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          -moz-transition: all 0.3s ease-in-out 0s;
+          -o-transition: all 0.3s ease-in-out 0s;
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+          cursor: pointer;
+          text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.15);
+          box-shadow: 0px 10px 25px -15px #0f0f0f; }
+          .slider .item .content .bot .bottom:hover {
+            transform: translateY(-5px);
+            color: #141923; }
+          .slider .item .content .bot .bottom:last-child {
+            background: #9ad545;
+            margin-left: 15px; }
+    .slider .item .carousel {
+      width: 100%; }
+    .slider .item .carousel-inner {
+      box-shadow: 10px 10px 25px -15px #0f0f0f; }
+      .slider .item .carousel-inner .carousel-item {
+        height: 470px; }
+        @media (max-width: 991px) {
+          .slider .item .carousel-inner .carousel-item {
+            height: auto; } }
+    .slider .item img {
+      min-height: 100%; }
+
+body {
+  direction: rtl;
+  text-align: right; }
+
+/*# sourceMappingURL=home-rtl.css.map */

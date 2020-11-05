@@ -1,0 +1,43 @@
+extend index
+
+block pageindex 
+ section.videos
+  div(class='container')
+   h2.title  Check my Video Channel on MyClin TV
+   p.text-center Watch my latest videos and make sure you subscribe and press the notifications button.
+
+   div.channel
+    iframe(src="https://www.youtube.com/embed/DGQwd1_dpuc" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="")
+ 
+   div.broadcast
+    a(href='#live' data-toggle="modal" class='bottom') LIVE TV broadcast 
+   
+ section.videos
+  div(class='container')
+   h2.title.mb-4 Check my latest videos
+   div.row
+    - for (var x = 0; x < 3; x++)
+       div.col-sm-4.item
+        div.video-item  
+          iframe(src="https://www.youtube.com/embed/DGQwd1_dpuc" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="")
+          p.text Simform is real asset to the TransAction Logistics team.
+
+
+ div(id="live" class="modal fade" role="dialog")
+  div(class="modal-dialog")
+   div(class="modal-content")
+    button(type="button" class="close" data-dismiss="modal") 
+     svg(width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+      path(d="M6.66271 6.00002L11.8625 0.800231C12.0455 0.617161 12.0455 0.320349 11.8625 0.137303C11.6794 -0.0457441 11.3826 -0.0457675 11.1995 0.137303L5.99975 5.33709L0.799987 0.137303C0.616917 -0.0457675 0.320105 -0.0457675 0.137058 0.137303C-0.0459882 0.320373 -0.0460117 0.617185 0.137058 0.800231L5.33682 6L0.137058 11.1998C-0.0460117 11.3829 -0.0460117 11.6797 0.137058 11.8627C0.228582 11.9542 0.348558 12 0.468535 12C0.588511 12 0.708464 11.9542 0.800011 11.8627L5.99975 6.66295L11.1995 11.8627C11.291 11.9542 11.411 12 11.531 12C11.651 12 11.7709 11.9542 11.8625 11.8627C12.0455 11.6796 12.0455 11.3828 11.8625 11.1998L6.66271 6.00002Z" fill="#1A1919")
+    div.channel
+     iframe(src="https://www.youtube.com/embed/DGQwd1_dpuc" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="")
+
+
+
+
+
+
+
+
+
+

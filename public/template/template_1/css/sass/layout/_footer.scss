@@ -1,0 +1,125 @@
+.footer {
+    @include section;
+    background: $footer;
+    padding-bottom: $zero;
+    @media (max-width: 991px) {
+        padding: $zero;
+    }
+    .boxfot {
+
+        @media (max-width: 991px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+            margin-top: $maxmargin;
+        }
+ 
+        .title {
+            @include title;
+            font-size: 22px;
+            margin-bottom: $minmargin;
+            text-align: $left;
+            color: $white;
+            &::before {
+                display: $none;
+            }
+        }
+        .navmenu {
+            a {
+                @include hyprlink;
+            }
+        }
+       
+        .textcontact {
+            a,
+            p {
+                display: $block;
+                width: $fullwidth;
+                margin-bottom:$minmargin;
+                @include transition(all 0.5s ease-in-out 0s);
+                position: relative;
+                padding-left: 25px;
+                line-height: 22px;
+                color: $white;
+                &:last-child {
+                    margin: $zero;
+                }
+                i {
+                    @include position(absolute, $left: 0px, $top: 7px);
+                    font-size: 13px;
+                }
+            }
+            a:hover {
+                color:$blue;
+            }
+        }
+    }
+    .detals {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: $minmargin;
+        border-top: 1px solid rgba(255,255,255,0.62);
+        padding-top: $minmargin;
+        width: $fullwidth;
+        @media (max-width: 767px) {
+            display: $block;
+            text-align: center;
+        }
+        .text{
+            color: $white;
+            @media (max-width: 767px) {
+               width: $fullwidth;
+            }
+        }
+        .social {
+            @include social;
+            margin-top: $minmargin;
+            @media (max-width: 767px) {
+                width: $fullwidth;
+                justify-content: center;
+                a{
+                    margin: $zero 8px;
+                }
+           }
+        }
+    }
+    .copyright {
+        @include flex;
+        position: relative;
+        margin-top: $maxmargin;
+        padding: $minmargin $zero;
+        background: $white;
+        text-align: $senter;
+        @media (max-width: 767px) {
+            display: $block;
+        }
+        p {
+            a {
+                color: $blue;
+                text-decoration: underline;
+                &:hover{
+                    text-decoration: $none; 
+                }
+            }
+        }
+    }
+    .scrollToTop {
+        @include bottom;
+        width: 50px;
+        height: 50px;
+        padding: $zero;
+        @include border-radius(50%);
+        @include position(fixed, $right: 15px, $bottom: 15px);
+        display: $none;
+        border: $zero;
+        z-index: $zindex;
+        color: $white;
+        padding-top: 11px;
+        @media (max-width: 991px) {
+            display: $none !important;
+        }
+        &:hover {
+            border: $zero;
+        }
+    }
+}

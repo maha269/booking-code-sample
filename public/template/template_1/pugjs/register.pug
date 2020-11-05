@@ -1,0 +1,42 @@
+extend index
+
+block pageindex 
+ section.registr  
+  div.container
+   div.signupfilde
+    div.title-sig
+     h3.title  Create New Account 
+     p Create your own acccount
+    form(action="#" method="post")
+      //- div.alert.alert-success #[i(class="fa fa-check")] Logged in successfully 
+      //- div.alert.alert-danger #[i(class="fa fa-exclamation-triangle")]   There is a mistake, please try again  
+      div.row
+       div.col-sm-12.inpusrach
+        label First Name
+        input(type="text" class="form-control"  placeholder="First Name")
+       div.col-sm-12.inpusrach
+        label Last Name
+        input(type="text" class="form-control"  placeholder="Last Name")
+       div.col-sm-12.inpusrach
+        label Address
+        input(type="text" class="form-control"  placeholder="Address")
+      
+       div.col-sm-12.inpusrach
+        label Password
+        input(type="password" class="form-control"  placeholder="Password")
+       div.col-sm-12.inpusrach
+        label Repeat Password
+        input(type="password" class="form-control"  placeholder="Repeat Password")
+       div.col-sm-12.inpusrach.type-it
+        div.row
+         label.col Gender
+         label.col.che-box
+          input(type="radio" name="radio")
+          span.label-text Male
+         label.col.che-box
+          input(type="radio" name="radio")
+          span.label-text Female  
+       div.col-sm-12.inpusrach.text-center
+        button(type="submit" class="bottom") registr    
+      p.textsign.text-center Have Account ? 
+       a(href="login.html")  Login   

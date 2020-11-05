@@ -1,0 +1,19 @@
+extend index
+
+block pageindex 
+ section.forget  
+  div.container
+   div.signupfilde
+    div.title-sig
+     h3.title  Forgot The Password
+     p You can retrieve the password
+    form(action="#" method="post")
+      //- div.alert.alert-success #[i(class="fa fa-check")] Logged in successfully 
+      //- div.alert.alert-danger #[i(class="fa fa-exclamation-triangle")]   There is a mistake, please try again  
+      div.row
+       div.col-sm-12.inpusrach
+        label Email Address
+        input(type="email" class="form-control"  placeholder="Email Address")
+       div.col-sm-12.inpusrach.text-center
+        button(type="submit" class="bottom") ForGot Now     
+

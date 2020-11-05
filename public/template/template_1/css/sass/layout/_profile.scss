@@ -1,0 +1,413 @@
+.profile {
+    @include section;
+    padding-top:$zero !important;
+    padding-bottom:$maxmargin !important;
+   
+    .item {
+        @media (max-width: 991px) {
+            flex: $fullwidth;
+            max-width: $fullwidth;
+          
+        }
+        &.col-sm-6.item {
+            @media (max-width: 991px) {
+                max-width: 50%;
+                flex: 50%;
+            }
+            @media (max-width:767px) {
+                max-width: $fullwidth;
+                flex: $fullwidth;
+            }
+        }
+        .inner {
+            @include style-inner;
+            padding: 20px;
+            margin-top: $maxmargin;
+            .inpudata {
+                margin-top: $minmargin;
+                position: relative;
+                @media (max-width: 991px) {
+                    max-width: $fullwidth;
+                    flex: $fullwidth;
+                }
+                .form-control {
+                    @include input;
+                }
+                .select {
+                    position: relative;
+                    height: 50px;
+                }
+                .select-hidden {
+                    display: none;
+                    visibility: hidden;
+                    padding-right: 10px;
+                }
+                .select-styled {
+                    @include input;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    position: relative;
+                    position: absolute;
+                    top: $zero;
+                    left: 0px;
+                    height: $fullwidth;
+                    width: calc(100%);
+                    cursor: pointer;
+                    &:before {
+                        content: "\f078";
+                        @include position(absolute, $right: 15px);
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 600;
+                        font-size: 12px;
+                        @include transition(all 0.3s ease-in-out 0s);
+                    }
+                    &.active,
+                    &:focus {
+                        color: #495057;
+                        border-color: #80bdff;
+                        outline: 0;
+                        box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+                        &:before {
+                            @include rotate(180deg);
+                        }
+                    }
+                }
+                .select-options {
+                    @include position(absolute, $top: 50px, $left: 23px, $right: 23px);
+                    display: $none;
+                    z-index: 999;
+                    margin: $zero;
+                    padding: $zero;
+                    background: $white;
+                    padding: $minmargin;
+                    width: calc(100% - 46px);
+                    @include border-radius(0px 0px 15px 15px);
+                    @include prefixer (box-shadow, 0px 3px 2px #e4e4e4, webkit moz o ms);
+                    li {
+                        margin: $zero;
+                        padding: 5px $zero;
+                        text-indent: 15px;
+                        color: $blak;
+                        cursor: pointer;
+                        @include transition(all 0.5s ease-in);
+                        &:hover {
+                            background: $ofwhite;
+                        }
+                    }
+                }
+                .bottom {
+                    height: 43px;
+                    margin: $zero;
+                }
+            }
+            .title {
+                @include title;
+                font-size: 18px;
+                text-transform: capitalize;
+                text-align: $left;
+            }
+            .profile-link {
+                margin-top: $minmargin;
+                a {
+                    display: $block;
+                    width: $fullwidth;
+                    margin-bottom: 12px;
+                    position: relative;
+                    @include transition(all 0.5s ease-in-out 0s);
+                    &:last-child {
+                        margin-bottom: $zero;
+                    }
+                    &::before {
+                        content: "";
+                        @include position(absolute, $top: 0px, $left: -20px);
+                        width: 4px;
+                        height: $fullwidth;
+                        @include transition(all 0.5s ease-in-out 0s);
+                    }
+                    &:hover,
+                    &.active {
+                        color: $green;
+                        &::before {
+                            background: $green;
+                        }
+                    }
+                }
+            }
+            &.text-center {
+                .photo {
+                    margin: $zero $auto;
+                    width: 130px;
+                    height: 130px;
+                    background: $ofwhite;
+                    border: 2px solid $green;
+                    @include border-radius(50%);
+                    overflow: hidden;
+                    img {
+                        @include border-radius(50%);
+                        max-width: $fullwidth;
+                        max-height: $fullwidth;
+                    }
+                }
+                .title {
+                    @include title;
+                    text-transform: capitalize;
+                    font-size: 18px;
+                    margin: 8px $zero;
+                }
+                .email {
+                    display: $block;
+                    @include transition(all 0.5s ease-in-out 0s);
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+            .bottom {
+                @include bottom;
+                margin-top: 38px;
+                &.bot-dir {
+                    float: $right;
+                    margin-top: -34px;
+                }
+                @media (max-width: 991px) {
+                    margin-top: $minmargin;
+                }
+            }
+            ul.contant {
+                margin-top: $minmargin;
+                li {
+                    display: flex;
+                    width: $fullwidth;
+                    margin-bottom: 4px;
+                }
+            }
+            .phone-number,
+            .text-email {
+                margin-top: $minmargin;
+                span {
+                    display: flex;
+                    color: $colorselect;
+                }
+            }
+            .head-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: $fullwidth;
+                padding-bottom: $minmargin;
+                @media (max-width: 991px) {}
+                .pager {
+                    display: flex;
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        font-size: 12px;
+                        @include border-radius(4px);
+                        background: $colorselect;
+                        color: $white;
+                        cursor: pointer;
+                        border: $zero;
+                        padding: $zero;
+                        outline: $none;
+                        @include transition(all 0.5s ease-in-out 0s);
+                        &:hover {
+                            background: $green;
+                        }
+                        &:last-child {
+                            margin-left: 10px;
+                        }
+                        @media (max-width: 991px) {
+                            width: 30px;
+                            height: 30px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+                &.create {
+                    display: $inline;
+                    .text {
+                        margin-top: 8px;
+                    }
+                }
+            }
+            .table {
+                margin: $zero;
+                background: $white;
+                text-align: center;
+                td {
+                    border-bottom: 1px solid $ofwhite;
+                    &:first-child {
+                        color: $green;
+                    }
+                }
+                tr {
+                    @include transition(all 0.5s ease-in-out 0s);
+                    &:hover {
+                        background: $ofwhite;
+                        td {
+                            color: $green;
+                        }
+                    }
+                    &:last-child {
+                        td {
+                            border: $zero;
+                            padding-bottom: $zero;
+                        }
+                    }
+                }
+                th {
+                    font-weight: 600;
+                    border-bottom: 1px solid $ofwhite;
+                    border-top: 1px solid $ofwhite;
+                }
+            }
+            .inner-pro {
+                margin-bottom: 24px;
+                @media (max-width: 991px) {
+                    max-width: $fullwidth;
+                    flex: $fullwidth;
+                }
+                .inner-bord {
+                    padding: 20px;
+                    @include border-radius(15px);
+                    border: 1px solid $ofwhite;
+                    position: relative;
+                    @media (max-width: 991px) {
+                        padding: $minmargin;
+                    }
+                    .title {
+                        font-size: 16px;
+                    }
+                    .text {
+                        margin-top: 8px;
+                        color: $colorselect;
+                    }
+                    .removal {
+                        @include position(absolute, $top: 15px, $right: 15px);
+                        color: $red;
+                        z-index: 10;
+                    }
+                }
+            }
+            .form-add {
+                border-top: 1px solid $ofwhite;
+                padding-top: 24px;
+                .inpudata {
+                    margin-top: 16px;
+                    position: relative;
+                    @media (max-width: 991px) {
+                        max-width: $fullwidth;
+                        flex: $fullwidth;
+                    }
+                    .form-control {
+                        @include input;
+                    }
+                    .bottom {
+                        height: 43px;
+                        margin: $zero;
+                    }
+                }
+                .text-or {
+                    height: 1px;
+                    width: $fullwidth;
+                    background: $ofwhite;
+                    position: relative;
+                    margin: $minmargin $zero;
+                    p {
+                        @include position(absolute, $top: -15px, $right: 0px, $left: 0px);
+                        margin: $zero $auto;
+                        width: 60px;
+                        text-align: center;
+                        background: $white;
+                        padding: $zero $minmargin;
+                        font-size: 18px;
+                        color: $green;
+                    }
+                }
+            }
+        }
+        .alert {
+            display: $inline;
+            width: $fullwidth;
+            margin: $zero;
+            margin-top: $minmargin;
+        }
+        .itpord {
+            margin-top: 24px;
+            @media (max-width: 991px) {
+                flex: 50%;
+                max-width: 50%;
+            }
+            @media (max-width:450px) {
+                flex: $fullwidth;
+                max-width: $fullwidth;
+            }
+            .prod-item {
+                margin: $zero;
+                width: $fullwidth !important;
+                .min-head {
+                    justify-content: flex-end;
+                }
+            }
+        }
+       
+        .itembox{
+            margin-top: $maxmargin;
+            @media (max-width:991px) {
+               margin-top: $maxmargin;
+               max-width: 50%;
+               flex: 50%;
+            }
+            @media (max-width: 550px) {
+                max-width: $fullwidth;
+                flex: $fullwidth;
+             }
+            .stability {
+                display: $block;
+                width: $fullwidth;
+                position: relative;
+                padding:$maxmargin;
+                text-align: center;
+                color: $blak;
+                background: $white;
+                @include transition(all 0.5s ease-in-out 0s);
+                @include prefixer (box-shadow, 0px 0px 11px #7573733d, webkit moz o ms);
+                &:hover{
+                    @include prefixer (box-shadow,0px 0px 21px #656464fa, webkit moz o ms);
+                    @include border-radius(30px);
+                    i{
+                        color: $green; 
+                    }
+                }
+                i{
+                    font-size: 60px;
+                    color: $yellow;
+                    @include transition(all 0.5s ease-in-out 0s);
+                }
+                .title{
+                    @include title;
+                    font-size: 20px !important;
+                    margin: 10px $zero;
+                    height: 28px;
+                    overflow: hidden;
+                }
+                p {
+                    line-height: 21px;
+                    font-size: 13px;
+                    height: 85px;
+                    overflow: hidden;
+                    @media (max-width: 550px) {
+                        height: $auto;
+                     }
+                }
+            }
+        }
+    }
+}
+
+ 
+ 

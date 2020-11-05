@@ -1,0 +1,131 @@
+.contactus {
+    @include section;
+    .title {
+        @include title;
+        text-align: center;
+    }
+    p.text-center {
+        margin-top: $minmargin;
+    }
+    .cont-item {
+        width: $fullwidth;
+        padding: $maxmargin;
+        background: rgba(206, 234, 237, 0.34);
+        margin-top: $maxmargin;
+        .it-cont {
+            text-align: center;
+            @media (max-width: 991px) {
+                max-width: $fullwidth;
+                flex: $fullwidth;
+                margin-bottom: $maxmargin;
+                &:last-child {
+                    margin: $zero;
+                }
+            }
+            .title {
+                font-size: 22px !important;
+                text-shadow: $none;
+            }
+            p {
+                margin-top: 5px;
+            }
+            .bottom {
+                @include bottom;
+                margin-top: $minmargin;
+                min-width: 150px;
+            }
+            &:nth-child(2) {
+                .bottom {
+                    background: $green;
+                }
+            }
+        }
+    }
+    .mobile-app-store {
+        width: $fullwidth;
+        margin-top: $maxmargin;
+        text-align: center;
+        img {
+            max-width: $fullwidth;
+        }
+    }
+    .detals {
+        width: $fullwidth;
+        padding: $maxmargin;
+        background: $white;
+        margin-top: $maxmargin;
+        @include border-radius(5px);
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+        .it-cont {
+            text-align: center;
+            @media (max-width: 991px) {
+                max-width: $fullwidth;
+                flex: $fullwidth;
+                margin-bottom: $maxmargin;
+                &:last-child {
+                    margin: $zero;
+                }
+            }
+            .title {
+                font-size: 22px !important;
+                text-shadow: $none;
+                margin-bottom: 10px;
+            }
+            i {
+                font-size: 30px;
+                height: 50px;
+            }
+            p,
+            a {
+                display: block;
+            }
+        }
+    }
+    .item {
+        margin-top: $maxmargin;
+        @media (max-width: 991px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+        }
+        .inner {
+            @include style-inner;
+            padding: $maxmargin;
+            @include border-radius(5px);
+            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+            .title {
+                text-align: $left;
+                font-size: 30px;
+            }
+            .text {
+                margin-top: 8px;
+            }
+            .inpusrach {
+                margin-top: $minmargin+1px;
+                .form-control {
+                    @include input;
+                }
+                textarea.form-control {
+                    height: 150px;
+                    resize: $none;
+                }
+                .bottom {
+                    @include bottom;
+                    height: 50px;
+                    width: $fullwidth;
+                }
+            }
+        }
+        .map-contact {
+            @include section;
+            padding: $zero !important;
+            iframe {
+                width: $fullwidth;
+                height: 555px;
+                border: $zero;
+                @media (max-width: 991px) {}
+            }
+        }
+    }
+}
+
+// End contactus

@@ -1,0 +1,33 @@
+extend index
+
+block pageindex 
+ section.login  
+  div.container
+   div.signupfilde
+    div.title-sig
+     h3.title  login
+     p With Your Social Media
+    ul.row.icons-social
+     li.col 
+      a(href="#" class="icon-facebook") #[i(class="fab fa-facebook-f")] Facebook
+     li.col 
+      a(href="#" class="icon-twitter") #[i(class="fab fa-twitter")] Twitter
+     li.col 
+      a(href="#" class="icon-gplus") #[i(class="fab fa-google")] Google
+    p Or With Your Email & Password
+    form(action="#" method="post")
+      //- div.alert.alert-success #[i(class="fa fa-check")] Logged in successfully 
+      //- div.alert.alert-danger #[i(class="fa fa-exclamation-triangle")]   There is a mistake, please try again  
+      div.row
+       div.col-sm-12.inpusrach
+        label Email Address
+        input(type="email" class="form-control"  placeholder="Email Address")
+       div.col-sm-12.inpusrach
+        label Password
+        input(type="password" class="form-control pass"  placeholder="Password")
+       div.col-sm-12.inpusrach
+        a(href="forget.html" class='forgetlink') Forgot The Password ?         
+       div.col-sm-12.inpusrach.text-center
+        button(type="submit" class="bottom") LOGIN    
+      p.textsign.text-center Don’t Have Account ?
+       a(href="signup.html")    Register   Now

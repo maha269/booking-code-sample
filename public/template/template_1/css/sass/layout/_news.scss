@@ -1,0 +1,24 @@
+ .news {
+     @include section;
+     .title {
+         @include title;
+         text-align: $left;
+         font-size: 30px;
+     }
+     .photonews {
+         width: $fullwidth;
+         margin-top: $maxmargin;
+         img {
+             width: $fullwidth;
+         }
+     }
+     .contant {
+         margin-top: $minmargin;
+         p {
+             width: $fullwidth;
+             margin-top: $minmargin;
+         }
+     }
+ }
+ 
+ ///* End news

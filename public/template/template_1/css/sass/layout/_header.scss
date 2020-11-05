@@ -1,0 +1,461 @@
+.header {
+    width: $fullwidth;
+    position: relative;
+    z-index: $zindex;
+    background: $white;
+    @include transition(all 0.5s ease-in-out 0s);
+    @include prefixer (box-shadow, 0px 4px 10px rgba(40, 54, 69, 0.18), webkit moz o ms);
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &.sticky {
+        @include position(fixed, $top: 0, $left: 0, $right: auto, $bottom: auto);
+        @include transition(all 0.5s ease-in-out 0s);
+        .minheeader {
+            margin-top: -40px;
+            @include transition(all 0.5s ease-in-out 0s);
+        }
+    }
+    .minheeader {
+        width: $fullwidth;
+        padding: 4px $zero;
+        position: relative;
+        border-bottom: 1px solid rgba(40, 54, 69, 0.15);
+        .linkstop {
+            display: flex;
+            align-items: center;
+            a {
+                text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.19);
+                @include transition(all 0.5s ease-in-out 0s);
+                margin-right: $minmargin;
+                @media (max-width: 767px) {
+                    margin-right: 10px;
+                    font-size: 13px;
+                }
+                i {
+                    font-size: 16px;
+                    color: $red;
+                    text-shadow: $none;
+                    @media (max-width: 767px) {
+                        font-size: 12px;
+                    }
+                }
+                &.register {
+                    font-weight: 600;
+                    text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.19);
+                    padding: $zero 8px;
+                    margin: $zero;
+                    @include border-radius(6px);
+                    border: 1px solid rgba(0, 0, 0, 0.41);
+                    &:hover {
+                        background: $ofwhite;
+                    }
+                }
+            }
+        }
+        .dropdown {
+            .dropdown-toggle {
+                @include transition(all 0.5s ease-in-out 0s);
+                font-size: 13px;
+                margin: $zero;
+                text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.19);
+                span {
+                    width: 78px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    display: $inline;
+                    height: 12px;
+                    line-height: 12px;
+                    @media (max-width: 550px) {
+                        width: 60px;
+                    }
+                }
+                i {
+                    font-size: 10px;
+                    color: $colortext;
+                    text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.19);
+                }
+                &:after {
+                    display: $none;
+                }
+            }
+            .dropdown-menu.show {
+                margin-top: 12px;
+                right: $zero !important;
+                left: $auto !important;
+                padding: $zero;
+                transform: $none !important;
+                top: 33px !important;
+                border: 1px solid $ofwhite;
+                z-index: 2;
+                .dropdown-item {
+                    padding: 5px $minmargin+5px;
+                    border-bottom: 1px solid $ofwhite;
+                    font-size: 13px;
+                    @include transition(all 0.5s ease-in-out 0s);
+                    background: $none !important;
+                    &:last-child {
+                        border: $zero;
+                    }
+                    &.active,
+                    &:active,
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+                &:before {
+                    content: "";
+                    @include position(absolute, $top: -13px, $right: 6px);
+                    width: $zero;
+                    height: $zero;
+                    border-left: 8px solid $transparent;
+                    border-right: 8px solid $transparent;
+                    border-bottom: 12px solid $ofwhite;
+                }
+                &:after {
+                    content: "";
+                    @include position(absolute, $top: -10px, $right: 6px);
+                    width: $zero;
+                    height: $zero;
+                    border-left: 8px solid $transparent;
+                    border-right: 8px solid $transparent;
+                    border-bottom: 10px solid $white;
+                }
+            }
+            &.language {
+                a {
+                    height: $auto;
+                    border-right: $zero;
+                    padding: 7px 10px !important;
+                    margin: $zero;
+                    i {
+                        font-size: 12px;
+                    }
+                    img {
+                        width: 16px;
+                        height: 11px;
+                        margin-right: 5px;
+                    }
+                }
+                .dropdown-toggle {
+                    padding: $zero;
+                    margin: $zero;
+                    border: $zero;
+                    line-height: 8px;
+                    cursor: pointer;
+                }
+                .dropdown-menu.show {
+                    left: 0!important;
+                    right: auto!important;
+                    &:before {
+                        @include position(absolute, $top: -13px !important, $left: 15px !important);
+                    }
+                    &:after {
+                        @include position(absolute, $top: -10px !important, $left: 14.1px !important);
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        height: 90px;
+        @media (max-width: 991px) {
+            height: 70px;
+        }
+    }
+    .logo {
+        img {
+            width: 200px;
+            @include transition(all 0.5s ease-in-out 0s);
+            @media (max-width: 991px) {
+                width: 150px;
+            }
+        }
+    }
+    #cssmenu {
+        @include position(relative);
+        z-index: 10;
+        @include transition(all 0.5s ease-in-out 0s);
+        #menu-button {
+            display: $none;
+        }
+        ul {
+            display: inline-flex;
+            li {
+                @include position(relative);
+                margin-left: $maxmargin;
+                @media (max-width: 1199px) {
+                    margin-left: $minmargin;
+                }
+                &:hover>ul {
+                    left: $auto;
+                    z-index: ($zindex - 850);
+                }
+                a {
+                    display: $block;
+                    @include position(relative);
+                    text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.19);
+                    @include transition(all 0.5s ease-in-out 0s);
+                    outline: $none;
+                    &:hover,
+                    &.active {
+                        color: $blue;
+                    }
+                }
+                &:hover a {
+                    color: $blue;
+                }
+            }
+            ul {
+                @include position(absolute, $top: 100%, $left: -9999px);
+                padding-top: 35px;
+                @media (max-width: 991px) {
+                    padding-top: $zero;
+                }
+                li {
+                    margin: $zero !important;
+                    @include transition(background-color 1s .1s, color 2s);
+                    background: $gray;
+                    padding: $zero $minmargin;
+                    &.has-sub>a:after {
+                        content: '';
+                        @include position(absolute, $top: 16px, $left: auto, $right: 11px, $bottom: auto);
+                        width: ($zero + 8);
+                        height: ($zero + 2);
+                        display: $block;
+                        background: $white;
+                    }
+                    &.has-sub>a:before {
+                        content: '';
+                        @include position(absolute, $top: 13px, $left: auto, $right: 14px, $bottom: auto);
+                        display: $block;
+                        width: ($zero + 2);
+                        height: ($zero + 8);
+                    }
+                    &.has-sub:hover>a:before {
+                        top: ($zero + 17);
+                        height: $zero;
+                    }
+                    a {
+                        padding: 7px $zero 7px $minmargin !important;
+                        min-width: 180px !important;
+                        height: $auto !important;
+                        color: $ofwhite !important;
+                        border-bottom: 1px solid #2b2b2b;
+                        text-transform: capitalize;
+                        &:hover {
+                            color: $beige !important;
+                        }
+                        &:before {
+                            @include position(absolute, $top: 6px, $left: 0);
+                            content: "-";
+                            display: $inline;
+                            color: $white;
+                        }
+                    }
+                    ul {
+                        margin-left: 100%;
+                        top: $zero !important;
+                        z-index: ($zindex - 830);
+                        &:after {
+                            display: $none;
+                        }
+                    }
+                    &:last-child a {
+                        border: $zero;
+                        padding-bottom: $zero;
+                    }
+                }
+            }
+        }
+    }
+    .bot {
+        @media (max-width: 991px) {
+            display: $none;
+        }
+        .bottom {
+            @include bottom;
+            &:last-child {
+                background: $green;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+.rspon {
+    display: $none;
+    @media (max-width: 991px) {
+        display: $block;
+        width: $fullwidth;
+        justify-content: center;
+        text-align: center;
+        margin: $maxmargin $zero;
+    }
+    .bottom {
+        @include bottom;
+        &:last-child {
+            background: $green;
+            margin-left: 15px;
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .header {
+        #cssmenu {
+            @include position(absolute, $right: 15px);
+            width: 200px;
+            z-index: 100;
+            #menu-button {
+                display: $block;
+            }
+            ul {
+                @include position(absolute, $top: 46px);
+                width: $fullwidth;
+                display: $none;
+                background: $blak;
+                z-index: 120;
+                li {
+                    width: $fullwidth;
+                    margin: $zero !important;
+                    position: relative;
+                    a {
+                        width: $fullwidth;
+                        padding: 10px $minmargin;
+                        height: $auto;
+                        margin: $zero;
+                        color: $white;
+                        border-bottom: 1px solid #2d2c2c;
+                    }
+                }
+            }
+            #menu-button {
+                display: $block !important;
+                cursor: pointer;
+                height: 20px;
+                width: 20px;
+                &:after {
+                    @include position(absolute, $top: 10px, $right: 0px);
+                    display: $block;
+                    height: 8px;
+                    width: 20px;
+                    border-top: 2px solid $blak;
+                    border-bottom: 2px solid $blak;
+                    content: '';
+                    @include transition(all 0.3s ease-in-out 0s);
+                }
+                &:before {
+                    @include position(absolute, $top: 4px, $right: 0px);
+                    display: $block;
+                    height: 2px;
+                    width: 20px;
+                    background: $blak;
+                    content: '';
+                    @include transition(all 0.3s ease-in-out 0s);
+                }
+                &.menu-opened:after {
+                    @include rotate(45deg);
+                    background: $red;
+                    top: 11px;
+                    border: $zero;
+                    height: 2px;
+                    width: 20px;
+                    @include transition(all 0.3s ease-in-out 0s);
+                }
+                &.menu-opened:before {
+                    @include rotate(-45deg);
+                    background: $red;
+                    top: 11px;
+                    width: 20px;
+                    @include transition(all 0.3s ease-in-out 0s);
+                }
+            }
+            .submenu-button {
+                @include position(absolute, $top: 0px, $right: 0px);
+                display: $block;
+                border-left: 1px solid rgba(120, 120, 120, 0.2);
+                height: 48px;
+                width: 48px;
+                cursor: pointer;
+                z-index: 10;
+                &.submenu-button.submenu-opened {
+                    background: $red;
+                }
+            }
+        }
+        #cssmenu ul ul li a {
+            min-width: $fullwidth;
+        }
+        #cssmenu ul ul ul li a {
+            padding-left: 35px;
+        }
+        #cssmenu ul ul li a {
+            min-width: $fullwidth !important;
+            color: $white;
+            background: $none;
+        }
+        #cssmenu ul ul li:hover>a,
+        #cssmenu ul ul li.active>a {
+            color: $white;
+        }
+        #cssmenu ul ul,
+        #cssmenu ul ul ul,
+        #cssmenu.align-right ul ul {
+            position: relative !important;
+            left: 0px;
+            width: 100%;
+            top: 0px !important;
+            padding: 0px !important;
+            box-shadow: none;
+            -webkit-border-radius: 0px;
+            border-radius: 0px;
+            background-clip: padding-box;
+        }
+        #cssmenu>ul>li.has-sub>a:after,
+        #cssmenu>ul>li.has-sub>a:before,
+        #cssmenu ul ul>li.has-sub>a:after,
+        #cssmenu ul ul>li.has-sub>a:before {
+            display: $none;
+        }
+        #cssmenu ul ul .submenu-button {
+            height: 34px;
+            width: 34px;
+        }
+        #cssmenu .submenu-button:after {
+            @include position(absolute, $top: 23px, $right: 21px);
+            width: 8px;
+            height: 2px;
+            display: block;
+            background: $white;
+            content: '';
+        }
+        #cssmenu ul ul .submenu-button:after {
+            top: 15px;
+            right: 13px;
+        }
+        #cssmenu .submenu-button.submenu-opened:after {
+            background: $white;
+        }
+        #cssmenu .submenu-button:before {
+            @include position(absolute, $top: 20px, $right: 24px);
+            display: $block;
+            width: 2px;
+            height: 8px;
+            background: $white;
+            content: '';
+        }
+        #cssmenu ul ul .submenu-button:before {
+            top: 12px;
+            right: 16px;
+        }
+        #cssmenu .submenu-button.submenu-opened:before {
+            display: $none;
+        }
+    }
+}
+
+// End Header

@@ -1,0 +1,1137 @@
+ .step-sign {
+     @include section;
+     .itemform {
+         @media (max-width: 991px) {
+             max-width: $fullwidth;
+             flex: $fullwidth;
+             margin: $zero;
+         }
+         .fild {
+             margin-top: $maxmargin;
+             position: relative;
+             @media (max-width: 991px) {
+                 max-width: $fullwidth;
+                 flex: $fullwidth;
+             }
+             .che-box {
+                 @include check-box;
+             }
+             .form-control {
+                 @include input;
+                 &:focus {
+                     box-shadow: none;
+                     border: 1px solid $blue;
+                 }
+             }
+             textarea {
+                 min-height: 300px;
+                 resize: $none;
+             }
+             .floating-label {
+                 position: absolute;
+                 left: 20px;
+                 top: 12px;
+                 padding: $zero 10px;
+                 background: $white;
+                 width: calc(100% - 40px);
+                 color: $blak;
+                 margin: $zero;
+                 font-weight: 600;
+                 pointer-events: none;
+                 @include transition(all 0.5s ease-in-out 0s);
+                 @media (max-width: 991px) {
+                     font-size: 13px;
+                 }
+             }
+             .intl-tel-input input,
+             .intl-tel-input input[type=text],
+             .intl-tel-input input[type=tel] {
+                 @media (max-width: 991px) {
+                     font-size: 13px;
+                 }
+             }
+             .che-box {
+                 @include check-box;
+             }
+             select.form-control {
+                 -webkit-appearance: none;
+             }
+             .iconsel {
+                 @include position(absolute, $top: 20px, $right: 30px);
+                 z-index: 10;
+                 color: #C4C1C1;
+                 font-size: 10px;
+             }
+             .form-control:focus~.floating-label,
+             .form-control:not(:focus):valid~.floating-label {
+                 top: -15px;
+                 width: auto;
+             }
+             .intl-tel-input input:focus~.floating-label,
+             .intl-tel-input input:not(:focus):valid~.floating-label {
+                 top: -15px;
+                 width: auto;
+             }
+             // .bottom{
+             //   @include bottom;
+             //   display: inline-block;
+             //   min-width: 180px;
+             //   @include prefixer (box-shadow, 0px 0px 10px rgba(0, 0, 0, 0.1), webkit moz o ms);
+             //   @media (max-width:991px) {
+             //     min-width: 115px;
+             //   }
+             // }
+             .ealamuh {
+                 @include position(absolute, $top: $zero, $right: 12px);
+                 z-index: 1;
+                 @include border-radius(0px 5px 5px 0px);
+                 @include flex;
+                 width: 50px;
+                 height: 50px;
+                 color: $white;
+                 background-image: -webkit-gradient(linear, left top, right top, from(#b1936f), to(#8a7658));
+                 background-image: -webkit-linear-gradient(top, #b1936f, #8a7658);
+                 background-image: -o-linear-gradient(top, #b1936f 0, #8a7658 100%);
+                 background-image: linear-gradient(top, #b1936f 0, #8a7658);
+             }
+         }
+         .add-fild {
+             .textsacand {
+                 @media (max-width: 991px) {
+                     display: $none;
+                 }
+             }
+         }
+     }
+ }
+ 
+ .style-add,
+ .icon-erm {
+     @include bottom;
+     @include position(absolute, $top: 42px, $right: -20px);
+     width: 25px;
+     height: 25px;
+     padding: $zero;
+     font-size: 13px;
+     min-width: inherit;
+     @media (max-width: 991px) {
+         top: 22px;
+         right: 11px;
+         width: 20px;
+         height: 20px;
+         padding: $zero;
+         font-size: 10px;
+     }
+ }
+ 
+ #contact {
+     width: $fullwidth;
+     padding: $zero 7%;
+     @media (max-width: 991px) {
+         padding: $zero;
+     }
+ }
+ 
+ .wizard,
+ .tabcontrol {
+     display: block;
+     width: $fullwidth;
+ }
+ 
+ .steps ul {
+     display: flex;
+     padding: $zero;
+     margin: $zero;
+     @media (max-width: 991px) {
+         display: block;
+     }
+     li {
+         flex: 1;
+         list-style: $none;
+         text-align: center;
+         @media (max-width: 991px) {
+             width: 33.333%;
+             display: inline-block;
+             margin-bottom: 2px;
+         }
+         @media (max-width:450px) {
+             width: 50%;
+             display: inline-block;
+         }
+         a {
+             padding: 10px;
+             position: relative;
+             @include flex;
+             font-weight: 600;
+             i {
+                 display: $none;
+                 text-align: center;
+                 width: 17px;
+                 height: 17px;
+                 color: $white;
+                 margin-right: 5px;
+                 padding-top: 3px;
+                 font-size: 10px;
+                 background: $green;
+                 @include border-radius(50%);
+             }
+         }
+         &.active {
+             a {}
+         }
+     }
+ }
+ 
+ .intl-tel-input input,
+ .intl-tel-input input[type=text],
+ .intl-tel-input input[type=tel] {
+     padding-left: 40px !important;
+ }
+ 
+ .wizard>.steps .current-info,
+ .tabcontrol>.steps .current-info,
+ .wizard>.content>.title,
+ .tabcontrol>.content>.title {
+     position: absolute;
+     left: -999em;
+ }
+ 
+ .wizard>.steps {
+     position: relative;
+     display: block;
+     width: $fullwidth;
+     @media (max-width: 991px) {
+         text-align: center;
+     }
+ }
+ 
+ .wizard.vertical>.steps {
+     display: inline;
+ }
+ 
+ .wizard.vertical>.steps>ul>li {
+     float: none;
+     width: $fullwidth;
+ }
+ 
+ .wizard>.steps a,
+ .wizard>.steps a:hover,
+ .wizard>.steps a:active {
+     width: auto;
+     text-decoration: none;
+ }
+ 
+ .wizard>.steps .disabled a,
+ .wizard>.steps .disabled a:hover,
+ .wizard>.steps .disabled a:active {
+     text-align: center;
+     color: $blak;
+     font-weight: 600;
+     background: url(../images/icon.png) no-repeat;
+     background-size: $fullwidth $fullwidth;
+ }
+ 
+ .wizard>.steps .current a,
+ .wizard>.steps .current a:hover,
+ .wizard>.steps .current a:active {
+     background: url(../images/icon-hover.png) no-repeat;
+     background-size: $fullwidth $fullwidth;
+     color: $white;
+     cursor: default;
+ }
+ 
+ .wizard>.steps .done a,
+ .wizard>.steps .done a:hover,
+ .wizard>.steps .done a:active {
+     background: url(../images/icon.png) no-repeat;
+     background-size: $fullwidth $fullwidth;
+     color: #000;
+     i {
+         display: $block;
+     }
+ }
+ 
+ .number {
+     display: $none;
+ }
+ 
+ .wizard>.steps .error a,
+ .wizard>.steps .error a:hover,
+ .wizard>.steps .error a:active {
+     // background: $red;
+     // color: $white;
+ }
+ 
+ .wizard>.content {
+     display: block;
+     position: relative;
+     width: auto;
+ }
+ 
+ .wizard.vertical>.content {
+     display: inline;
+ }
+ 
+ .wizard>.content>.body input.error,
+ .wizard>.content>.body select.error {
+     border: 1px solid rgba(236, 32, 43, 0.34);
+ }
+ 
+ .wizard>.content>.body label.error {
+     @include position(absolute, $left: 15px, $top: -31px);
+     color: $red;
+     z-index: 1;
+     font-size: 12px;
+ }
+ 
+ .intl-tel-input label.error {
+     left: $zero !important;
+ }
+ 
+ .wizard>.actions {
+     position: relative;
+     display: block;
+     width: $fullwidth;
+     margin-top: $maxmargin*2;
+     ul {
+         padding: $zero;
+         margin: $zero;
+     }
+     li {
+         list-style: $none;
+     }
+ }
+ 
+ .wizard.vertical>.actions {
+     display: inline;
+ }
+ 
+ .wizard>.actions>ul {
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .wizard>.actions a,
+ .wizard>.actions a:hover,
+ .wizard>.actions a:active {}
+ 
+ .wizard>.actions li:first-child a:hover {
+     color: $white;
+     border: 1px solid $blak;
+ }
+ 
+ .wizard>.actions .disabled a,
+ .wizard>.actions .disabled:first-child:hover a,
+ .wizard>.actions li:first-child a {
+     background: $white;
+     border: 1px solid #000;
+     ;
+     color: #000;
+ }
+ 
+ .wizard>.actions .disabled a,
+ .wizard>.actions .disabled a:hover,
+ .wizard>.actions .disabled a:active {
+     &::before {
+         background: $none;
+         color: inherit;
+     }
+ }
+ 
+ .actions li a {
+     @include bottom;
+     padding: 10px 45px;
+     background: #9ad545;
+     min-width: 120px;
+     text-shadow: 1px 1px 3px rgba(15, 15, 15, 0.15);
+     box-shadow: 0px 10px 25px -15px #0f0f0f;
+ }
+ 
+ .wizard .form-control:focus {
+     box-shadow: $none
+ }
+ 
+ .mb {
+     margin-bottom: $maxmargin*2;
+ }
+ 
+ .file-add {
+     margin-top: $maxmargin;
+     position: relative;
+     select.form-control {
+         color: $blak;
+         font-weight: 600;
+     }
+     .fild {
+         @media (max-width: 991px) {
+             max-width: 50% !important;
+             flex: 50% !important;
+         }
+         .che-box {
+             margin-bottom: -5px;
+             z-index: 10;
+             .label-text {
+                 font-weight: normal !important;
+             }
+         }
+     }
+     .text-to {
+         @include position(absolute, $top: 43px, $left: 50%);
+         margin-left: -7px;
+     }
+     .style-add,
+     .icon-erm {
+         top: 41px;
+         right: -40px;
+         @media (max-width: 991px) {
+             top: 16px;
+             right: -3px;
+         }
+     }
+ }
+ 
+ .textuser {
+     label.error {
+         left: $zero !important;
+     }
+     .floating-label {
+         left: 10px;
+         @media (max-width: 991px) {
+             max-width: $fullwidth;
+             flex: $fullwidth;
+             margin: $zero;
+         }
+     }
+ }
+ 
+ .item-us {
+     label.error {
+         left: $zero !important;
+     }
+ }
+ 
+ .r-icon {
+     .iconsel {
+         right: 15px;
+     }
+ }
+ 
+ .textmap {
+     position: relative;
+     width: $fullwidth;
+     padding-left: $minmargin+9px;
+     margin-top: $minmargin;
+     i {
+         @include position(absolute, $top: 0px, $left: 0px);
+         @include flex;
+         width: 19px;
+         height: 19px;
+         color: $white;
+         font-size: 9px;
+         background-image: -webkit-gradient(linear, left top, right top, from(#b1936f), to(#8a7658));
+         background-image: -webkit-linear-gradient(top, #b1936f, #8a7658);
+         background-image: -o-linear-gradient(top, #b1936f 0, #8a7658 100%);
+         background-image: linear-gradient(top, #b1936f 0, #8a7658);
+         @include border-radius(50%);
+     }
+     p {
+         font-weight: 600;
+         margin: $zero;
+         line-height: 1;
+     }
+     span {
+         font-weight: normal;
+         font-size: 11px;
+         line-height: 2px;
+     }
+ }
+ 
+ // End Add File input elements
+ /*********************************************************************
+**********************************************************************
+************************************************************************/
+ 
+ .nav-tabs {
+     display: flex;
+     border: $zero;
+     @media (max-width: 767px) {
+         justify-content: center;
+     }
+     li {
+         border: $zero;
+         margin: $zero;
+         width: calc(100% / 8);
+         @media (max-width: 991px) {
+             width: calc(100% / 4);
+             margin-bottom: 5px !important;
+         }
+         @media (max-width:767px) {
+             width: calc(100% / 3);
+         }
+         a {
+             text-align: center;
+             color: $blak;
+             font-weight: 600;
+             padding: 10px 5px;
+             background: url(../images/icon.png) no-repeat;
+             background-size: $fullwidth $fullwidth;
+             @include border-radius(0px);
+             border: $zero !important;
+             white-space: nowrap;
+             overflow: hidden;
+             text-overflow: ellipsis;
+             @include transition(all 0.5s ease-in-out 0s);
+             font-size: 13px;
+             @media (max-width: 767px) {
+                 font-size: 12px;
+             }
+             &.active,
+             &:hover {
+                 background: url(../images/icon-hover.png) no-repeat;
+                 background-size: $fullwidth $fullwidth;
+                 color: $white !important;
+                 border: $zero;
+             }
+         }
+     }
+ }
+ 
+ .tabs-tutor {
+     li {
+         width: calc(100% / 7);
+         @media (max-width: 991px) {
+             width: calc(100% / 4);
+             margin-bottom: 5px !important;
+         }
+         @media (max-width:767px) {
+             width: calc(100% / 3);
+         }
+     }
+ }
+ 
+ .item-tab {
+     margin-top: $maxmargin;
+     @media (max-width: 991px) {
+         max-width: 205px;
+         flex: 205px;
+         margin: $maxmargin $auto $zero $auto;
+     }
+     .imgcent {
+         text-align: center;
+         width: 205px;
+         @include border-radius(15px);
+         position: relative;
+         .img_prev {
+             width: $fullwidth;
+             height: 240px;
+             background: $ofwhite;
+             min-height: $fullwidth;
+             @include border-radius(15px);
+             position: relative;
+             z-index: 2;
+         }
+         .file-bro {
+             @include bottom;
+             padding: 8px 10px;
+             margin: $zero;
+             margin-top: $minmargin;
+         }
+     }
+     .textsacand {
+         margin-top: $minmargin;
+         font-size: 11px;
+         padding-left: $minmargin;
+     }
+ }
+ 
+ .item-tab2 {
+     @media (max-width: 991px) {
+         max-width: $fullwidth;
+         flex: $fullwidth;
+         margin: $zero;
+     }
+     .fild {
+         margin-top: $maxmargin;
+     }
+     .social {
+         width: $fullwidth;
+         li {
+             @include flex;
+             justify-content: flex-start;
+             width: $fullwidth;
+             margin-top: $maxmargin;
+             color: $blak;
+             @media (max-width: 991px) {
+                 margin-top: $minmargin;
+                 font-size: 12px;
+             }
+             @media (max-width:450px) {
+                 font-size: 10px;
+             }
+             span {
+                 @include flex;
+                 margin-right: 10px;
+                 width: 50px;
+                 height: 50px;
+                 border: 1px solid #CED4DA;
+                 @include border-radius(50%);
+                 @include transition(all 0.5s ease-in-out 0s);
+                 @media (max-width: 991px) {
+                     width: 35px;
+                     height: 35px;
+                     margin-right: 5px;
+                 }
+                 img {
+                     width: $auto;
+                     max-width: 20px;
+                     @media (max-width: 450px) {
+                         max-width: 14px;
+                     }
+                 }
+             }
+             a {
+                 color: #000;
+                 text-decoration: underline;
+                 margin-left: 5px;
+                 &:hover {
+                     text-decoration: $none;
+                 }
+             }
+         }
+     }
+     .forget {
+         float: $right;
+         color: $blak;
+         margin-top: 10px;
+         @include transition(all 0.5s ease-in-out 0s);
+         &:hover {
+             color: #000;
+         }
+     }
+ }
+ 
+ .pay-card {
+     display: flex;
+     margin-top: $maxmargin;
+     li {
+         margin-right: $maxmargin;
+         &:last-child {
+             margin-right: $zero;
+         }
+         img {
+             max-width: 55px;
+         }
+     }
+ }
+ 
+ .bot-all {
+     @include flex;
+     justify-content: flex-start;
+     width: $fullwidth;
+     margin-top: $maxmargin;
+     .bottom {
+         @include bottom;
+         min-width: 200px;
+         padding: 8px 10px;
+         @include prefixer (box-shadow, 0px 0px 10px #00000047, webkit moz o ms);
+         @media (max-width: 991px) {
+             min-width: 155px;
+             padding: 8px 5px;
+         }
+         &.last-bot {
+             background: $white;
+             color: $red;
+             border: 1px solid $red;
+             margin-left: $maxmargin;
+             @media (max-width: 991px) {
+                 margin-left: $minmargin;
+             }
+             &:hover {
+                 color: $white;
+                 border: 1px solid $blak;
+             }
+         }
+     }
+ }
+ 
+ .bot-de {
+     @include flex;
+     padding: $maxmargin $zero;
+     border-top: 1px solid #D9DFE8;
+     margin: $maxmargin*2 -30px $zero -30px;
+     @media (max-width: 991px) {
+         margin-top: $minmargin;
+         padding: $minmargin $zero;
+     }
+     .bottom {
+         @include bottom;
+         width: 180px;
+         padding: 8px 10px;
+         background: $red;
+         @include prefixer (box-shadow, 0px 0px 10px #00000047, webkit moz o ms);
+         @media (max-width: 991px) {
+             min-width: 100px;
+             width: auto;
+         }
+         &:last-child {
+             background: $white;
+             color: #000;
+             border: 1px solid #000;
+             margin-left: $minmargin;
+             &:hover {
+                 color: $white;
+                 border: 1px solid $blak;
+             }
+         }
+     }
+ }
+ 
+ .bot-card {
+     .bottom {
+         background-image: -webkit-gradient(linear, left top, right top, from(#b1936f), to(#8a7658));
+         background-image: -webkit-linear-gradient(top, #b1936f, #8a7658);
+         background-image: -o-linear-gradient(top, #b1936f 0, #8a7658 100%);
+         background-image: linear-gradient(top, #b1936f 0, #8a7658);
+     }
+ }
+ 
+ .mar-text {
+     margin-top: $maxmargin;
+     @media (max-width: 991px) {
+         margin-top: $minmargin;
+         font-size: 13px;
+         line-height: 25px;
+     }
+ }
+ 
+ .deleting {
+     padding: $zero !important;
+     .pop-det {
+         padding: $maxmargin $maxmargin $zero $maxmargin;
+     }
+     .fild {
+         margin-top: $maxmargin;
+     }
+ }
+ 
+ .prin-item {
+     @media (max-width: 991px) {
+         max-width: $fullwidth;
+         flex: $fullwidth;
+         margin: $zero;
+     }
+     .table-responsive {
+         margin-top: $maxmargin;
+         table {
+             th {
+                 color: #000;
+                 border: $zero;
+                 padding: $minmargin $zero;
+                 white-space: nowrap;
+                 overflow: hidden;
+                 text-overflow: ellipsis;
+                 a {
+                     color: #000;
+                     text-decoration: underline;
+                     &:hover {
+                         text-decoration: $none;
+                     }
+                 }
+             }
+             td {
+                 border-top: 1px dashed #D9D8D8;
+                 padding: $minmargin $zero;
+                 color: $blak;
+                 white-space: nowrap;
+                 overflow: hidden;
+                 text-overflow: ellipsis;
+                 a {
+                     color: $blak;
+                     text-decoration: underline;
+                     &:hover {
+                         text-decoration: $none;
+                     }
+                 }
+             }
+         }
+     }
+ }
+ 
+ .tab-pane {
+     min-height: 500px;
+     @media (max-width: 991px) {
+         min-height: inherit;
+     }
+ }
+ 
+ .linbox {
+     line-height: 20px;
+ }
+ 
+ .card-img {
+     margin-top: $maxmargin;
+     img {
+         max-width: 327px;
+         @media (max-width: 450px) {
+             width: $fullwidth;
+         }
+     }
+ }
+ 
+ .sec-tutor {
+     margin-top: $maxmargin*2;
+     @media (max-width: 991px) {
+         margin-top: $minmargin;
+     }
+ }
+ 
+ .check-notif {
+     width: $fullwidth;
+     border-bottom: 1px dashed #D9D8D8;
+     margin-top: $maxmargin;
+     padding-bottom: $minmargin;
+     &:last-of-type {
+         border: $zero;
+         padding: $zero;
+     }
+     .siza {
+         margin: $zero;
+         margin-bottom: $minmargin;
+     }
+     .che-box {
+         line-height: inherit;
+         margin-bottom: $minmargin;
+         small {
+             display: $block;
+         }
+         .label-text {
+             color: $colortext !important;
+         }
+         input[type="checkbox"]+.label-text:before,
+         input[type="radio"]+.label-text:before {
+             top: 7px;
+         }
+     }
+ }
+ 
+ .tutor {
+     width: $fullwidth;
+     border-bottom: 1px dashed #D9D8D8;
+     padding-bottom: $maxmargin;
+     &:last-of-type {
+         padding: $zero;
+         border: $zero;
+         margin: $zero;
+     }
+     .item-tutor {
+         @media (max-width: 991px) {
+             max-width: 50%;
+             flex: 50%;
+         }
+         @media (max-width:450px) {
+             max-width: $fullwidth;
+             flex: $fullwidth;
+         }
+         .title {
+             color: #000;
+             &.siza {
+                 font-size: 15px;
+             }
+         }
+         .fild {
+             margin-top: $maxmargin;
+             @media (max-width: 991px) {
+                 margin-top: $minmargin;
+             }
+         }
+     }
+     .tutor-img {
+         margin-top: $maxmargin;
+         @media (max-width: 991px) {
+             margin-top: $minmargin;
+         }
+         img {
+             float: $left;
+             width: 35px;
+             height: 35px;
+             @include border-radius(50%);
+             @include prefixer (box-shadow, 0px 0px 10px rgba(0, 0, 0, 0.1), webkit moz o ms);
+         }
+         .comtent-tutor {
+             padding-left: $maxmargin+$minmargin;
+             line-height: 19px;
+             .title {
+                 font-size: 13px !important;
+                 color: $blak;
+                 margin: $zero !important;
+             }
+             span {
+                 font-size: 12px;
+                 color: #767791;
+             }
+         }
+     }
+ }
+ 
+ .biling {
+     color: #000;
+     text-decoration: underline;
+     font-size: 14px;
+     margin-left: 10px;
+     @media (max-width: 767px) {
+         display: $block;
+         margin: $zero;
+     }
+     &:hover {
+         text-decoration: $none;
+     }
+ }
+ 
+ .social-item {
+     width: $fullwidth;
+     margin: $maxmargin*2 $zero $maxmargin+$minmargin $zero;
+     li {
+         position: relative;
+         width: $fullwidth;
+         color: $blak;
+         padding-left: 85px;
+         display: flex;
+         font-size: 13px;
+         line-height: 23px;
+         align-items: center;
+         span {
+             position: absolute;
+             left: $zero;
+             @include flex;
+             margin-right: $minmargin;
+             background: $white;
+             width: 70px;
+             height: 70px;
+             @include prefixer (box-shadow, 0px 0px 10px rgba(0, 0, 0, 0.1), webkit moz o ms);
+             @include border-radius(50%);
+             img {
+                 width: $auto;
+                 max-width: 25px;
+             }
+         }
+     }
+ }
+ 
+ .bot-all {
+     .calen {
+         background: $white;
+         color: #000;
+         border: 1px solid #000;
+         &:hover {
+             color: $white;
+             border: 1px solid $blak;
+         }
+     }
+ }
+ 
+ .calendar {
+     .title {
+         color: $blak !important;
+         margin: $zero;
+     }
+     .item-tutor {
+         margin-top: $maxmargin;
+         @media (max-width: 767px) {
+             max-width: $fullwidth;
+             flex: $fullwidth;
+         }
+     }
+     .fild.offset-sm-2 {
+         @media (max-width: 767px) {
+             max-width: $fullwidth;
+             flex: $fullwidth;
+             margin-left: $zero;
+         }
+         .che-box {
+             margin: $zero;
+             line-height: inherit;
+             margin-bottom: 10px;
+             input[type="checkbox"]+.label-text:before,
+             input[type="radio"]+.label-text:before {
+                 top: 7px;
+             }
+             span.label-text {
+                 font-weight: normal;
+             }
+         }
+     }
+ }
+ 
+ .st-flex {
+     display: flex;
+     justify-content: flex-end;
+ }
+ 
+ .fletext {
+     display: flex;
+     align-items: center;
+     margin-top: $maxmargin;
+     i {
+         top: $auto;
+     }
+ }
+ 
+ .education {
+     margin-top: $maxmargin+$minmargin;
+     .head-title {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         position: relative;
+         margin-bottom: -15px;
+         z-index: 10;
+         .title {
+             font-size: 18px;
+             font-weight: normal;
+             margin: $zero;
+         }
+         .style-add {
+             right: 0px;
+             top: auto;
+         }
+     }
+ }
+ 
+ .edit-all {
+     width: 40%;
+     @media (max-width: 991px) {
+         width: $fullwidth;
+     }
+     .item-edit {
+         margin-top: $maxmargin+$minmargin;
+         .head-title {
+             display: flex;
+             justify-content: flex-start;
+             align-items: center;
+             position: relative;
+             margin-bottom: -15px;
+             z-index: 10;
+             .title {
+                 font-size: 18px;
+                 font-weight: normal;
+                 margin: $zero;
+                 width: $auto;
+             }
+             .style-add {
+                 position: relative;
+                 right: $auto !important;
+                 top: $auto !important;
+                 margin-left: $minmargin;
+                 width: 20px;
+                 height: 20px;
+                 font-size: 10px;
+             }
+         }
+     }
+     .row-tow {
+         margin-top: $maxmargin;
+         position: relative;
+         .date {
+             @include position(absolute, $top: 0, $left: 0);
+             color: #000;
+             font-size: 13px;
+         }
+         .primary {
+             padding-left: 100px;
+         }
+         .head-title {
+             .title {
+                 font-size: 15px;
+                 @media (max-width: 991px) {
+                     font-size: 13px;
+                 }
+             }
+             .style-add {
+                 background: $none !important;
+                 width: $auto;
+                 height: $auto;
+                 color: #000;
+                 font-size: 14px;
+                 height: 30px;
+                 &::before {
+                     display: $none !important;
+                 }
+             }
+         }
+         .textmap {
+             span {
+                 font-size: 13px;
+             }
+         }
+         small {
+             display: block;
+             margin-top: $minmargin;
+             line-height: 20px;
+         }
+         .textmap.revie {
+             margin-top: $maxmargin+$minmargin;
+             p {
+                 font-weight: normal;
+             }
+             span {
+                 font-size: 11px;
+                 margin-top: 5px;
+             }
+         }
+     }
+ }
+ 
+ .item-stab {
+     margin-top: $maxmargin;
+     @media (max-width: 991px) {
+         max-width: 50%;
+         flex: 50%;
+     }
+     .inner {
+         display: $block;
+         width: $fullwidth;
+         position: relative;
+         padding: 24px;
+         text-align: center;
+         background: $white;
+         @include transition(all 0.5s ease-in-out 0s);
+         @include border-radius(5px);
+         box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+         border: 2px solid transparent;
+         cursor: pointer;
+         @media (max-width: 991px) {
+             padding: 16px;
+         }
+         &.active {
+             border: 2px solid $green;
+         }
+         img {
+             width: 100px;
+             height: 100px;
+             @include border-radius(50%);
+             box-shadow: 0px 10px 15px -15px #0f0f0f;
+             @media (max-width: 991px) {
+                 width: 75px;
+                 height: 75px;
+             }
+         }
+         .title {
+             @include title;
+             font-size: 20px !important;
+             margin-top: $minmargin+5px;
+             text-shadow: $none;
+             font-weight: 500;
+             @media (max-width: 991px) {
+                 font-size: 16px !important;
+                 margin-top: $minmargin;
+                 font-weight: bold;
+             }
+         }
+         p {
+             margin-top: 10px;
+             @media (max-width: 991px) {
+                 margin-top: $zero;
+             }
+         }
+     }
+ }

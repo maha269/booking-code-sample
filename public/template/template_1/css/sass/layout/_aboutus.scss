@@ -1,0 +1,59 @@
+.aboutus {
+    @include section;
+    .item {
+        @include flex;
+        &:last-child {
+            text-align: $left;
+        }
+        @media (max-width: 991px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+        }
+        img {
+            max-width: $fullwidth;
+            box-shadow: 10px 10px 25px -15px #0f0f0f;
+            @include border-radius(5px);
+        }
+    }
+    .inner-ab {
+        @media (max-width: 991px) {
+            margin-top: $maxmargin;
+            text-align: center;
+        }
+        .title {
+            @include title;
+            font-size: 20px;
+        }
+        p.text {
+            margin-top: $minmargin;
+            font-size: 15px;
+            line-height: 1.44;
+            opacity: 0.8;
+        }
+        .bottom {
+            @include bottom;
+            margin-top: $maxmargin+10px;
+            background: $none;
+            border: 1px solid #272b5b;
+            color: #0f0f0f;
+            &:hover {
+                background: $blue;
+                border: 1px solid $blue;
+                color: $white;
+            }
+        }
+    }
+}
+
+.privacy-policy {
+    @extend .aboutus;
+    .title {
+        @include title;
+        text-align: $left;
+    }
+    p {
+        margin-top: $maxmargin;
+    }
+}
+
+//  End AboutUs

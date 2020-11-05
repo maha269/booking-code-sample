@@ -1,0 +1,12 @@
+@import 'helpers/mixins';
+@import 'helpers/variables';
+@import 'layout/header';
+@import 'layout/slider';
+$direction:rtl;
+$right:left;
+$left:right;
+body {
+    direction: $direction;
+    text-align: $left;
+}
+ 

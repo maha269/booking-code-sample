@@ -1,0 +1,332 @@
+.min-box {
+    @include section;
+    .title {
+        @include title;
+        text-align: center;
+    }
+    .text {
+        font-size: 16px;
+        opacity: 0.5;
+        text-align: center;
+        margin-top: $minmargin;
+    }
+    .item {
+        margin-top: $maxmargin;
+        @media (max-width: 991px) {
+            max-width: 50%;
+            flex: 50%;
+        }
+        @media (max-width:767px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+        }
+        .stability {
+            display: $block;
+            width: $fullwidth;
+            position: relative;
+            padding: 24px;
+            text-align: center;
+            background: $white;
+            @include transition(all 0.5s ease-in-out 0s);
+            @include border-radius(5px);
+            box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+            .photo {
+                @include flex;
+                width: $fullwidth;
+                height: 200px;
+                overflow: hidden;
+                @include border-radius(5px);
+                box-shadow: 0px 10px 25px -15px #0f0f0f;
+                img {
+                    width: $fullwidth;
+                    min-height: $fullwidth;
+                }
+            }
+            .title {
+                @include title;
+                font-size: 24px !important;
+                height: 28px;
+                overflow: hidden;
+                font-weight: 500;
+                margin-top: $minmargin+5px;
+                @media (max-width: 991px) {
+                    font-size: 20px !important;
+                }
+            }
+            p {
+                line-height: 21px;
+                font-size: 13px;
+                height: 40px;
+                overflow: hidden;
+                margin-top: 10px;
+                @media (max-width: 550px) {
+                    height: $auto;
+                }
+            }
+            .bottom {
+                @include bottom;
+                margin-top: $maxmargin+10px;
+                background: $none;
+                border: 1px solid #272b5b;
+                color: #0f0f0f;
+                &:hover {
+                    background: $blue;
+                    border: 1px solid $blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.services {
+    @include section;
+    background: $white;
+    @media (max-width: 991px) {
+        padding-top: $zero;
+    }
+    .title {
+        @include title;
+        text-align: center;
+        margin-bottom: $minmargin;
+        @media (max-width: 991px) {
+            margin-bottom: $zero;
+        }
+    }
+    .item {
+        margin-top: $maxmargin;
+        @media (max-width: 991px) {
+            max-width: 50%;
+            flex: 50%;
+        }
+        @media (max-width:550px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+        }
+        .services-item {
+            text-align: center;
+            width: $fullwidth;
+            background-color: $white;
+            padding: $maxmargin;
+            @include border-radius(10px);
+            border-top: 5px solid $blue;
+            box-shadow: 0px 10px 25px -15px rgba(15, 15, 15, 0.92);
+            svg {
+                width: 30px;
+            }
+            .title {
+                font-size: 20px !important;
+                margin: $zero;
+                margin-top: $minmargin;
+                text-shadow: $none;
+            }
+            p {
+                line-height: 21px;
+                font-size: 13px;
+                height: 60px;
+                overflow: hidden;
+                margin-top: 10px;
+                @media (max-width: 550px) {
+                    height: $auto;
+                }
+            }
+        }
+    }
+}
+
+.videos {
+    @include section;
+    .title {
+        @include title;
+        text-align: center;
+        @media (max-width: 991px) {
+            margin: $zero !important;
+        }
+    }
+    .text-center {
+        margin-top: $maxmargin;
+    }
+    .channel {
+        display: flex;
+        justify-content: center;
+        margin-top: $maxmargin+$minmargin;
+        iframe {
+            display: $block;
+            width: 90%;
+            border: $zero;
+            height: 500px;
+            box-shadow: 0px 10px 25px -15px #000000;
+            @media (max-width: 991px) {
+                width: $fullwidth;
+            }
+        }
+    }
+    .item {
+        margin-top: $maxmargin;
+        @media (max-width: 991px) {
+            max-width: 50%;
+            flex: 50%;
+        }
+        @media (max-width: 667px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+        }
+        .video-item {
+            display: $block;
+            width: $fullwidth;
+            position: relative;
+            text-align: center;
+            color: $blak;
+            background: $white;
+            overflow: hidden;
+            @include transition(all 0.5s ease-in-out 0s);
+            border-radius: 4px;
+            box-shadow: 0px 10px 25px -15px #191919;
+            iframe {
+                display: $block;
+                width: $fullwidth;
+                border: $zero;
+                height: 200px;
+            }
+            .text {
+                padding: $minmargin;
+                height: 86px;
+                overflow: hidden;
+                @media (max-width: 667px) {
+                    height: $auto;
+                }
+            }
+        }
+    }
+}
+
+.broadcast {
+    @include section;
+    text-align: center;
+    .bottom {
+        @include bottom;
+    }
+}
+
+.modal {
+    padding: $zero 10px!important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.64);
+    .close {
+        @include position(absolute, $top: -40px, $right: 0);
+        margin: $zero;
+        width: 30px;
+        height: 30px;
+        background: $white;
+        @include flex;
+        padding: $zero;
+        opacity: 1;
+        text-shadow: $none;
+        outline: $none;
+    }
+    .modal-dialog {
+        max-width: 800px;
+    }
+    .modal-content {
+        padding: $minmargin;
+        margin-top: 50px;
+    }
+    .channel {
+        display: flex;
+        justify-content: center;
+        width: $fullwidth;
+        iframe {
+            display: $block;
+            width: $fullwidth;
+            border: $zero;
+            height: 450px;
+        }
+    }
+}
+
+.min-details {
+    @include section;
+    background: $white;
+    .title {
+        @include title;
+        color: $green;
+    }
+    .text-center {
+        margin-top: $minmargin;
+    }
+    .item {
+        margin-top: $maxmargin*3;
+        @media (max-width: 991px) {
+            max-width: 50%;
+            flex: 50%;
+        }
+        @media (max-width: 550px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+        }
+        .stability {
+            display: $block;
+            width: $fullwidth;
+            position: relative;
+            padding: $minmargin;
+            text-align: center;
+            color: $blak;
+            background: $white;
+            @include transition(all 0.5s ease-in-out 0s);
+            @include prefixer (box-shadow, 0px 0px 11px #7573733d, webkit moz o ms);
+            &:hover {
+                @include prefixer (box-shadow, 0px 0px 21px #656464fa, webkit moz o ms);
+                @include border-radius(20px);
+            }
+            i {
+                margin: $zero $auto;
+                width: 100px;
+                height: 100px;
+                @include border-radius(50%);
+                color: $white;
+                @include flex;
+                font-size: 50px;
+                background: $yellow;
+                font-style: normal;
+                margin-top: -60px;
+                text-transform: uppercase;
+                @include prefixer (box-shadow, 0px 0px 11px #7573733d, webkit moz o ms);
+            }
+            p {
+                line-height: 24px;
+                height: 168px;
+                margin-top: $maxmargin;
+                overflow: hidden;
+                @media (max-width: 550px) {
+                    height: $auto;
+                }
+            }
+            .bottom {
+                @include bottom;
+                background: $green;
+                width: $fullwidth;
+                padding: 8px $maxmargin;
+                margin-top: $maxmargin;
+                &::before {
+                    background: $yellow;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    @include section;
+    padding-top: $zero !important;
+    .item {
+        margin-top: $maxmargin;
+        @media (max-width: 991px) {
+            max-width: $fullwidth;
+            flex: $fullwidth;
+        }
+        img {
+            width: $fullwidth;
+        }
+    }
+}

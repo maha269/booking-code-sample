@@ -1,0 +1,68 @@
+.slider {
+    @include section;
+    background:$white;
+    .item{
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 991px) {
+           max-width: $fullwidth;
+           flex: $fullwidth;
+        }
+        &:first-child{
+            order: 1;
+            @media (max-width: 991px) {
+                order: 2;
+                margin-top: $maxmargin;
+            }
+        }
+        &:last-child{
+            order: 2;
+            @media (max-width: 991px) {
+                order: 1;
+            }
+        }
+        .content{
+            width: $fullwidth;
+            @media (max-width: 991px) {
+              text-align: center;
+            }
+            .title{
+                @include title;
+            }
+            .text{
+                font-size: 16px;
+                margin-top: $minmargin;
+            }
+            .bot{
+                margin-top: 88px;
+                .bottom{
+                  @include bottom;
+             
+                  &:last-child{
+                    background: $green;
+                    margin-left: 15px;
+                  }
+                }
+               
+              }
+        }
+        .carousel {
+            width: $fullwidth;
+        }
+        .carousel-inner {
+            box-shadow: 10px 10px 25px -15px #0f0f0f;
+            .carousel-item {
+                height: 470px;
+                @media (max-width: 991px) {
+                    height: $auto;
+                }
+            }
+        }
+  
+        img {
+            min-height: $fullwidth;
+        }
+    
+    }
+}
